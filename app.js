@@ -18,6 +18,14 @@ app.use(express.static("public"));
 app.get("/",(req,res)=>{
     //{key:value}
     res.render("home", {keyname:homeStartingContent} );
+});
+
+app.get("/contact",(req,res)=>{
+res.render("contact",{keynice:contactContent});
+});
+
+app.get("/about",(req,res)=>{
+    res.render("about",{keybeautiful:aboutContent});
 })
 
 
