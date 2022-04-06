@@ -16,7 +16,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/",(req,res)=>{
-    res.render("home", {keyname:homeStartingContent});
+    //{key:value}
+    res.render("home", {keyname:homeStartingContent} );
 })
 
 
