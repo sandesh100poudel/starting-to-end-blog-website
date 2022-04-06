@@ -32,7 +32,10 @@ app.get("/compose",(req,res)=>{
     res.render("compose");
 });
 
-
+app.post("/compose",(req,res)=>{
+    const sitea=req.body.sita
+    console.log(sitea);
+})
 
 
 
