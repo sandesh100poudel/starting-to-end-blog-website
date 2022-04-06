@@ -26,7 +26,13 @@ res.render("contact",{keynice:contactContent});
 
 app.get("/about",(req,res)=>{
     res.render("about",{keybeautiful:aboutContent});
-})
+});
+
+app.get("/compose",(req,res)=>{
+    res.render("compose");
+});
+
+
 
 
 
