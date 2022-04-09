@@ -34,7 +34,10 @@ app.get("/compose",(req,res)=>{
 
 app.post("/compose",(req,res)=>{
     const sitea=req.body.sita
+    const ritea=req.body.rita
     console.log(sitea);
+    console.log(ritea);
+    
 })
 
 
