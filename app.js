@@ -15,13 +15,17 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+var posttitution=[];
+
 app.get("/",(req,res)=>{
     //{key:value}
     res.render("home", {keyname:homeStartingContent} );
+    console.log(posttitution);
 });
 
 app.get("/contact",(req,res)=>{
 res.render("contact",{keynice:contactContent});
+
 });
 
 app.get("/about",(req,res)=>{
@@ -33,10 +37,15 @@ app.get("/compose",(req,res)=>{
 });
 
 app.post("/compose",(req,res)=>{
-    const sitea=req.body.sita
-    const ritea=req.body.rita
-    console.log(sitea);
-    console.log(ritea);
+   
+    
+    //var objectname ={key:value, key:{key:value}}
+    const post={
+        title:req.body.sita,
+        blog:req.body.rita
+    };
+    posttitution.push(post);
+    res.redirect("/");
     
 })
 
