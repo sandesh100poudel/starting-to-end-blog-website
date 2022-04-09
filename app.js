@@ -15,12 +15,12 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-var posttitution=[];
+let posttitution=[];
 
 app.get("/",(req,res)=>{
     //{key:value}
-    res.render("home", {keyname:homeStartingContent} );
-    console.log(posttitution);
+    res.render("home", {keyname:homeStartingContent, gita:posttitution} );
+    
 });
 
 app.get("/contact",(req,res)=>{
