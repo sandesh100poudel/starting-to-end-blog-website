@@ -1,2 +1,8 @@
 /node_modules
 .package-lock.json
+
+# <% for (var i=0; i<gita.length; i++){ %>
+#     <h1><%=post.title%></h1>
+#     <p><%=post.blog%></p>
+
+# <%}%>

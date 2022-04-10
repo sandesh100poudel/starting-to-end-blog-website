@@ -2,11 +2,15 @@
 
     <h1>Home</h1>
 <p><%=keyname%></p>
-<%console.log(gita)%>
+ <!-- <%console.log(gita)%>  -->
 
-<% for (var i=0; i<gita.length; i++){ %>
-   <% console.log(gita[i].title);%>
-<%}%>
+
+    
+
+ <% gita.forEach((post)=>{ %>
+   <h1><%=post.title%></h1> 
+    <p><%=post.blog%></p>
+  <% }) %> 
 
    
 <%- include('partials/footer'); -%>
