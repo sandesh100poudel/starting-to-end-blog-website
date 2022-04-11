@@ -9,7 +9,7 @@
 
  <% gita.forEach((post)=>{ %>
    <h1><%=post.title%></h1> 
-    <p><%=post.blog%></p>
+    <p><%=post.blog.substring(0,50)+"...."%></p>
   <% }) %> 
 
    
